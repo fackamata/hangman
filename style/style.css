@@ -1,0 +1,169 @@
+html body {
+  width: 100%;
+  height: 100%;
+  background-color: #EAE8DC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #B65D51;
+}
+
+html body #languages {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+}
+
+html body #languages > * {
+  cursor: pointer;
+  background-color: #D8C3A4;
+  color: #B65D51;
+  border: none;
+  border-radius: 40%;
+  width: 30px;
+}
+
+html body #btn-new-game {
+  position: absolute;
+  background-color: #D8C3A4;
+  border-color: #B65D51;
+  color: #B65D51;
+  font-weight: bold;
+  font-size: 3vw;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 30vw;
+  height: 10%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+html body main {
+  display: none;
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+}
+
+html body main #hangman {
+  position: absolute;
+  width: 40vw;
+  height: 60vh;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+html body main #hangman svg {
+  margin: 0 auto;
+  stroke: black;
+  stroke-width: 4;
+}
+
+html body main #hangman svg circle {
+  fill: none;
+}
+
+html body main #hangman svg > * {
+  display: none;
+}
+
+html body main #letter-played {
+  background-color: red;
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  bottom: 3vh;
+  right: 0%;
+}
+
+html body main #letter_already_played {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  bottom: 20vh;
+  right: 0%;
+}
+
+html body main #word_container {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  bottom: 14vh;
+  left: 0%;
+  text-align: center;
+  color: #B65D51;
+}
+
+html body main #end_game {
+  display: none;
+  position: absolute;
+  background-color: #B65D51;
+  border-radius: 10px;
+  color: #D8C3A4;
+  opacity: 0.9;
+  width: 60vw;
+  height: 30vh;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+html body main #end_game #solution {
+  margin-top: 0;
+}
+
+html body main #end_game button {
+  display: block;
+  position: absolute;
+  width: 10vw;
+  height: 6vh;
+  top: 60%;
+  left: 50%;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #D8C3A4;
+  color: #B65D51;
+  border-color: #B65D51;
+  cursor: pointer;
+}
+
+html > * {
+  margin: 0;
+}
+
+@media only screen and (max-width: 400px) {
+  html body main #hangman {
+    top: 15%;
+    left: 10%;
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  html body main #letter_already_played {
+    bottom: 15vh;
+  }
+  html body main #word_container {
+    bottom: 5vh;
+  }
+  html body main #end_game {
+    width: 80vw;
+  }
+  html body main #end_game button {
+    width: 20vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

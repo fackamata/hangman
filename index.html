@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" href="./Hangman-Game-grey.ico" type="image/x-icon">
+    <title>Pendu</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <button id="btn-new-game"></button>
+    <div id="languages">
+        <button id="francais" onclick="francais()">fr</button>
+        <button id="english" onclick="english()">en</button>
+    </div>
+    <main id="main">
+        <div id="hangman">
+            <svg id="svg" height="400" width="400">
+                <line id="hangman1" x1="10" y1="250" x2="150" y2="250" /> <!-- 1 horizontal line base -->
+                <line id="hangman2"x1="80" y1="250" x2="80" y2="20" /> <!-- 2 vertical line -->
+                <line id="hangman3"x1="78" y1="20" x2="200" y2="20" /> <!-- 3 horizontal line top -->
+                <line id="hangman4" x1="80" y1="70" x2="130" y2="20" /> <!-- 4 angle line -->
+                <line id="hangman5" x1="200" y1="18" x2="200" y2="60" /> <!-- 5 rope line -->
+                <circle id="hangman6" cx="200" cy="80" r="20"  stroke-width="4"/> <!-- 6 head -->
+                <line id="hangman7" x1="200" y1="100" x2="200" y2="150" /> <!-- 7 body -->
+                <line id="hangman8" id="armL" x1="200" y1="120" x2="170" y2="140" /> <!-- 8 left arm -->
+                <line id="hangman9" id="armR" x1="200" y1="120" x2="230" y2="140" /> <!-- 9 right arm -->
+                <line id="hangman10" id="legL" x1="200" y1="150" x2="180" y2="190" /> <!-- 10 right arm -->
+                <line id="hangman11" x1="200" y1="150" x2="220" y2="190" /> <!-- 11 right arm -->
+            </svg>
+         </div>
+        <h2 id="letter_played"></h2>
+        <h2 id="word_container"></h2>
+        <h3 id="letter_already_played"> </h3>
+        <div id="end_game">
+            <h1 id="end_message"></h1>
+            <h2 id="solution"></h2>
+            <button id="resetBtn" onclick="reset()">OK</button>
+        </div>
+    </main>
+    <script src="./script/app.js"></script>
+</body>
+</html>
