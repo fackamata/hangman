@@ -10,9 +10,9 @@ const hangmanSvg = document.getElementById("svg")
 const letterPlayed = document.getElementById("letter_played")
 const letterPlayedTwoTimes = document.getElementById("letter_already_played")
 
-let test = true;
+let test = false;
 
-function reset(){
+//function reset(){
 let fileUrl = './words.txt' // location of words file
 let nbLetterMin = 4; // number minimal of letter in word to find
 let letter_wrong =[] // user letter input wrong
@@ -23,9 +23,9 @@ let normalWord = ""; // word before removing accent
 let user_letter_input = "";
 let word_content = '';
 let end = false; 
-};
+//};
 
-reset()
+//reset()
 let playedAgainMsg = "You already played : "
 let userLetterMsg = "Letter Played :"
 let endMsgWin = "Congratulation !"
@@ -148,13 +148,14 @@ function reset(){
     endGame.style.display = "none";
     letter_wrong = [];
     letter_correct = [];
-    letter_find = [];
+    letter_find = []
     end = false;
 }
 
 
 function play_game(){
     letterPlayed.textContent = "";
+    //reset();
     getWordToFind();
     displayEmptyWord();
     //console.log(letter_wrong)
