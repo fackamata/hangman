@@ -10,8 +10,9 @@ const hangmanSvg = document.getElementById("svg")
 const letterPlayed = document.getElementById("letter_played")
 const letterPlayedTwoTimes = document.getElementById("letter_already_played")
 
-let test = false;
+let test = true;
 
+function reset(){
 let fileUrl = './words.txt' // location of words file
 let nbLetterMin = 4; // number minimal of letter in word to find
 let letter_wrong =[] // user letter input wrong
@@ -21,32 +22,15 @@ let wordToFind = "";
 let normalWord = ""; // word before removing accent
 let user_letter_input = "";
 let word_content = '';
-let end = false;
+let end = false; 
+};
 
-
+reset()
 let playedAgainMsg = "You already played : "
 let userLetterMsg = "Letter Played :"
 let endMsgWin = "Congratulation !"
 let endMsgLoose = "You loose !"
-english()
 
-function francais(){
-    if(wordToFind.length > 0){
-        reset()
-    }
-    h1.textContent = "Le pendu"
-    btn_start.textContent = "Nouveau mot"
-    playedAgainMsg = "Vous avez déjà jouer la lettre : "
-    userLetterMsg = "Lettres jouées : "
-    endMsgWin = "Congratulation !"
-    endMsgLoose = "You loose !"
-    fetchFile('./mots.txt')
-    // return fileUrl
-}
-
-// var originalText = "éàçèñ"
-// var result = originalText.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-// console.log(result)
 
 function english(){
     if(wordToFind.length > 0){
@@ -61,7 +45,21 @@ function english(){
     fetchFile('./words.txt')
 }
 // game start in English
+english()
 
+function francais(){
+    if(wordToFind.length > 0){
+        reset()
+    }
+    h1.textContent = "Le pendu"
+    btn_start.textContent = "Nouveau mot"
+    playedAgainMsg = "Vous avez déjà jouer la lettre : "
+    userLetterMsg = "Lettres jouées : "
+    endMsgWin = "Félicitation !"
+    endMsgLoose = "Perdu !"
+    fetchFile('./mots.txt')
+    // return fileUrl
+}
 
 
 function getWordFromTxt(param){
@@ -150,7 +148,7 @@ function reset(){
     endGame.style.display = "none";
     letter_wrong = [];
     letter_correct = [];
-    letter_find = []
+    letter_find = [];
     end = false;
 }
 
@@ -159,6 +157,7 @@ function play_game(){
     letterPlayed.textContent = "";
     getWordToFind();
     displayEmptyWord();
+    //console.log(letter_wrong)
 
     window.addEventListener('keydown', event => {
         if (!end ) {
