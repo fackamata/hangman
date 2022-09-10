@@ -47,15 +47,15 @@ html{
             height: 90vh;
             #hangman{
                 position:absolute;
-                display: flex;
-                justify-content: center;
+                // display: flex;
+                // justify-content: center;
                 width: 40vw;
                 height: 60vh;
                 top: 10%;
-                left: 50%;
+                left: calc(50% + 200px);
                 transform: translateX(-50%);
                 svg {
-                    margin: 0 auto;
+                    // margin: 0 auto;
                     stroke: black;
                     stroke-width: 4;
                 
