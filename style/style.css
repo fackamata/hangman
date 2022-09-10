@@ -46,7 +46,7 @@ html body main #hangman {
   width: 40vw;
   height: 60vh;
   top: 10%;
-  left: calc(50% + 200px);
+  left: 57vw;
   transform: translateX(-50%);
 }
 html body main #hangman svg {
