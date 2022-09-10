@@ -47,6 +47,8 @@ html{
             height: 90vh;
             #hangman{
                 position:absolute;
+                display: flex;
+                justify-content: center;
                 width: 40vw;
                 height: 60vh;
                 top: 10%;
